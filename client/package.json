@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "node --env-file=.env client.ts"
+    "build": "tsc",
+    "dev": "node --watch client.ts"
   },
   "keywords": [],
   "author": "Maximilian Schwarzmüller",
@@ -11,6 +12,12 @@
   "description": "Demo MCP client consuming the demo MCP server",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.7.0",
+    "dotenv": "^16.4.7",
     "openai": "^4.87.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.13",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
   }
 }
